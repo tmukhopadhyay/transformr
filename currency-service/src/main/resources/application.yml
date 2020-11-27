@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: currency-service
+
+server:  port: 8002

@@ -8,9 +8,9 @@
 		<version>1.0.0</version>
 	</parent>
 	<groupId>com.transformr</groupId>
-	<artifactId>currency-service</artifactId>
-	<name>currency-service</name>
-	<description>The currency service</description>
+	<artifactId>api-gateway</artifactId>
+	<name>api-gateway</name>
+	<description>The Api Gateway</description>
 
 	<dependencies>
 		<dependency>
