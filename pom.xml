@@ -32,7 +32,14 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Hoxton.SR9</version>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-dependencies</artifactId>
+				<version>${spring-boot-admin.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -70,5 +77,7 @@
 	<modules>
 		<module>discovery-service</module>
 		<module>currency-service</module>
+		<module>time-service</module>
+		<module>unit-service</module>
 	</modules>
 </project>

@@ -1,7 +1,17 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
 spring:
   application:
     name: discovery-service
-    
+  boot:    admin:      context-path: /admin
+
 server:  port: 8761
 eureka:  client:
     fetch-registry: false
