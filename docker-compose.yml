@@ -1,4 +1,43 @@
 version: '3'
 services:
+  discovery-service:
+    build: discovery-service
+    ports:
+      - 8761:8761
+    networks:
+      - api-network
+  config-service:
+    build: config-service
+    volumes:
+      - ./configurations:/var/configurations
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery-service:8761/eureka
+        -DADMIN_SERVER=http://discovery-service:8761/admin
+        -Dspring.cloud.config.server.native.searchLocations=/var/configurations
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+    ports:
+      - 8888:8888
+    networks:
+      - api-network
   api-gateway:
-    restart: always
+    build: api-gateway
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery-service:8761/eureka
+        -DADMIN_SERVER=http://discovery-service:8761/admin
+        -DCONFIG_SERVER=http://config-service:8888
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      config-service:
+        condition: service_healthy
+    ports:
+      - 8001:8001
+    networks:
+      - api-network
+networks:
+  api-network:
+    driver: bridge

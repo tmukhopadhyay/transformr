@@ -75,6 +75,8 @@
 	</dependencies>
 
 	<modules>
+		<module>api-gateway</module>
+		<module>config-service</module>
 		<module>discovery-service</module>
 		<module>currency-service</module>
 		<module>time-service</module>

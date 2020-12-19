@@ -1,8 +1,0 @@
-management:  endpoints:    web:      exposure:        include: '*'  endpoint:    health:      show-details: always
-
-spring:
-  application:
-    name: api-gateway  boot:    admin:      client:        url:        - http://localhost:8761/admin
-
-server:
-  port: 8001

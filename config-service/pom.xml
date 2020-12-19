@@ -7,32 +7,28 @@
 		<artifactId>transformr</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<groupId>com.transformr</groupId>
-	<artifactId>api-gateway</artifactId>
-	<name>api-gateway</name>
-	<description>The Api Gateway</description>
+	<groupId>com.transformr.config</groupId>
+	<artifactId>config-service</artifactId>
+	<name>config-service</name>
+	<description>The configuration service</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
 		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>api-gateway</finalName>
+		<finalName>config-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
