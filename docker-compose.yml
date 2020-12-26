@@ -22,22 +22,39 @@ services:
       - 8888:8888
     networks:
       - api-network
-  api-gateway:
-    build: api-gateway
-    environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery-service:8761/eureka
-        -DADMIN_SERVER=http://discovery-service:8761/admin
-        -DCONFIG_SERVER=http://config-service:8888
-    depends_on:
-      discovery-service:
-        condition: service_healthy
-      config-service:
-        condition: service_healthy
-    ports:
-      - 8001:8001
-    networks:
-      - api-network
+#  api-gateway:
+#    build: api-gateway
+#    environment:
+#      - JAVA_OPTS=
+#        -DEUREKA_SERVER=http://discovery-service:8761/eureka
+#        -DADMIN_SERVER=http://discovery-service:8761/admin
+#        -DCONFIG_SERVER=http://config-service:8888
+#    depends_on:
+#      discovery-service:
+#        condition: service_healthy
+#      config-service:
+#        condition: service_healthy
+#    ports:
+#      - 8001:8001
+#    networks:
+#      - api-network
+#  currency-service:
+#    build: currency-service
+#    environment:
+#      - JAVA_OPTS=
+#        -DEUREKA_SERVER=http://discovery-service:8761/eureka
+#        -DADMIN_SERVER=http://discovery-service:8761/admin
+#        -DCONFIG_SERVER=http://config-service:8888
+#        -DEXCHANGE_API_ACCESS_KEY=${EXCHANGE_API_ACCESS_KEY}
+#    depends_on:
+#      discovery-service:
+#        condition: service_healthy
+#      config-service:
+#        condition: service_healthy
+#    ports:
+#      - 8002:8002
+#    networks:
+#      - api-network
 networks:
   api-network:
     driver: bridge
