@@ -3,14 +3,14 @@ spring:
     gateway:
       routes:
         - id: currency-service
-          uri: http://localhost:8002
+          uri: lb://currency-service
           predicates:
             - Path=/currency/**
         - id: time-service
-          uri: http://localhost:8003
+          uri: lb://time-service
           predicates:
             - Path=/time/**
         - id: unit-service
-          uri: http://localhost:8004
+          uri: lb://unit-service
           predicates:
             - Path=/unit/**

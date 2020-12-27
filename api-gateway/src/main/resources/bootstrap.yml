@@ -24,6 +24,10 @@ spring:
     config:
       uri: ${CONFIG_SERVER:http://localhost:8888}
       fail-fast: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
 
 server:
   port: 8001
