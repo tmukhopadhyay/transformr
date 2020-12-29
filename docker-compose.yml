@@ -54,6 +54,22 @@ services:
       - 8002:8002
     networks:
       - api-network
+  time-service:
+    build: time-service
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery-service:8761/eureka
+        -DADMIN_SERVER=http://discovery-service:8761/admin
+        -DCONFIG_SERVER=http://config-service:8888
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      config-service:
+        condition: service_healthy
+    ports:
+      - 8003:8003
+    networks:
+      - api-network
 networks:
   api-network:
     driver: bridge
