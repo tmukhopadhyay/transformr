@@ -26,4 +26,4 @@ spring:
       fail-fast: true
 
 server:
-  port: 8003
+  port: ${SERVER_PORT:8003}

@@ -12,7 +12,7 @@ spring:
     name: discovery-service
   boot:    admin:      context-path: /admin
 
-server:  port: 8761
+server:  port: ${SERVER_PORT:8761}
 eureka:  client:
     fetch-registry: false
     register-with-eureka: false

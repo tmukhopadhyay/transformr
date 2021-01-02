@@ -15,7 +15,7 @@ FROM openjdk:8u275-jre
 VOLUME /tmp
 ADD target/*.jar app.jar
 
-HEALTHCHECK --interval=10s --timeout=30s CMD curl -f http://localhost:8761/actuator/health || exit 1
+HEALTHCHECK --interval=10s --timeout=40s CMD curl -f http://localhost:8761/actuator/health || exit 1
 
 ENV JAVA_OPTS=""
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]

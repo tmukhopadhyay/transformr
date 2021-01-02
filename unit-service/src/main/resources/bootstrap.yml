@@ -14,7 +14,7 @@ management:
 
 spring:
   application:
-    name: api-gateway
+    name: unit-service
   boot:
     admin:
       client:
@@ -24,10 +24,6 @@ spring:
     config:
       uri: ${CONFIG_SERVER:http://localhost:8888}
       fail-fast: true
-    gateway:
-      discovery:
-        locator:
-          enabled: true
 
 server:
-  port: ${SERVER_PORT:8001}
+  port: ${SERVER_PORT:8004}

@@ -6,29 +6,28 @@ services:
       - 8761:8761
     networks:
       - api-network
-  config-service:
-    build: config-service
-    volumes:
-      - ./configurations:/var/configurations
     environment:
       - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery-service:8761/eureka
-        -DADMIN_SERVER=http://discovery-service:8761/admin
-        -Dspring.cloud.config.server.native.searchLocations=/var/configurations
+        -DSERVER_PORT=8761
+  config-service:
+    build: config-service
     depends_on:
       discovery-service:
         condition: service_healthy
+    volumes:
+      - ./configurations:/var/configurations
     ports:
       - 8888:8888
     networks:
       - api-network
-  api-gateway:
-    build: api-gateway
     environment:
       - JAVA_OPTS=
+        -DSERVER_PORT=8888
         -DEUREKA_SERVER=http://discovery-service:8761/eureka
         -DADMIN_SERVER=http://discovery-service:8761/admin
-        -DCONFIG_SERVER=http://config-service:8888
+        -Dspring.cloud.config.server.native.searchLocations=/var/configurations
+  api-gateway:
+    build: api-gateway
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -38,13 +37,14 @@ services:
       - 8001:8001
     networks:
       - api-network
-  currency-service:
-    build: currency-service
     environment:
       - JAVA_OPTS=
+        -DSERVER_PORT=8001
         -DEUREKA_SERVER=http://discovery-service:8761/eureka
         -DADMIN_SERVER=http://discovery-service:8761/admin
         -DCONFIG_SERVER=http://config-service:8888
+  currency-service:
+    build: currency-service
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -54,13 +54,14 @@ services:
       - 8002:8002
     networks:
       - api-network
-  time-service:
-    build: time-service
     environment:
       - JAVA_OPTS=
+        -DSERVER_PORT=8002
         -DEUREKA_SERVER=http://discovery-service:8761/eureka
         -DADMIN_SERVER=http://discovery-service:8761/admin
         -DCONFIG_SERVER=http://config-service:8888
+  time-service:
+    build: time-service
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -70,6 +71,29 @@ services:
       - 8003:8003
     networks:
       - api-network
+    environment:
+      - JAVA_OPTS=
+        -DSERVER_PORT=8003
+        -DEUREKA_SERVER=http://discovery-service:8761/eureka
+        -DADMIN_SERVER=http://discovery-service:8761/admin
+        -DCONFIG_SERVER=http://config-service:8888
+  unit-service:
+    build: unit-service
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      config-service:
+        condition: service_healthy
+    ports:
+      - 8004:8004
+    networks:
+      - api-network
+    environment:
+      - JAVA_OPTS=
+        -DSERVER_PORT=8004
+        -DEUREKA_SERVER=http://discovery-service:8761/eureka
+        -DADMIN_SERVER=http://discovery-service:8761/admin
+        -DCONFIG_SERVER=http://config-service:8888
 networks:
   api-network:
     driver: bridge

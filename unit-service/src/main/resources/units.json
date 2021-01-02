@@ -1,0 +1,237 @@
+{
+  "lengths": [
+    {
+      "name": "Nanometer",
+      "unit": "nm",
+      "value": 0.000000001
+    },
+    {
+      "name": "Milimeter",
+      "unit": "mm",
+      "value": 0.001
+    },
+    {
+      "name": "Centimeter",
+      "unit": "cm",
+      "value": 0.01
+    },
+    {
+      "name": "Metre",
+      "unit": "mt",
+      "value": 1
+    },
+    {
+      "name": "Kilometre",
+      "unit": "km",
+      "value": 1000
+    },
+    {
+      "name": "Mile",
+      "unit": "mi",
+      "value": 1609.35
+    },
+    {
+      "name": "Yard",
+      "unit": "yd",
+      "value": 0.9144
+    },
+    {
+      "name": "Foot",
+      "unit": "ft",
+      "value": 0.3048
+    },
+    {
+      "name": "Inch",
+      "unit": "in",
+      "value": 0.0254
+    },
+    {
+      "name": "Light Year",
+      "unit": "ly",
+      "value": 9460660000000000
+    },
+    {
+      "name": "Micron",
+      "unit": "mr",
+      "value": 0.000001
+    },
+    {
+      "name": "League",
+      "unit": "lg",
+      "value": 4828.032
+    },
+    {
+      "name": "Nautical Mile",
+      "unit": "na",
+      "value": 4828.032
+    }
+  ],
+  "areas": [
+    {
+      "name": "Square meter",
+      "unit": "mt2",
+      "value": 1
+    },
+    {
+      "name": "Square kilometer",
+      "unit": "km2",
+      "value": 1000000
+    },
+    {
+      "name": "Square centimeter",
+      "unit": "cm2",
+      "value": 0.0001
+    },
+    {
+      "name": "Square milimeter",
+      "unit": "mm2",
+      "value": 0.000001
+    },
+    {
+      "name": "Hectare",
+      "unit": "ha",
+      "value": 10000
+    },
+    {
+      "name": "Acre",
+      "unit": "ac",
+      "value": 4046.8564224
+    },
+    {
+      "name": "Square mile",
+      "unit": "mi2",
+      "value": 2589988.1103
+    },
+    {
+      "name": "Square yard",
+      "unit": "yd2",
+      "value": 0.83612736
+    },
+    {
+      "name": "Square foot",
+      "unit": "ft2",
+      "value": 0.09290304
+    },
+    {
+      "name": "Square inch",
+      "unit": "in2",
+      "value": 0.00064516
+    }
+  ],
+  "volumes": [
+    {
+      "name": "Cubic meter",
+      "unit": "mt3",
+      "value": 1
+    },
+    {
+      "name": "Cubic kilometer",
+      "unit": "km3",
+      "value": 1000000000
+    },
+    {
+      "name": "Cubic centimeter",
+      "unit": "cm3",
+      "value": 0.000001
+    },
+    {
+      "name": "Litre",
+      "unit": "lt",
+      "value": 0.001
+    },
+    {
+      "name": "Mililiter",
+      "unit": "ml",
+      "value": 0.000001
+    },
+    {
+      "name": "Gallon",
+      "unit": "gl",
+      "value": 0.0037854118
+    },
+    {
+      "name": "Pint",
+      "unit": "pt",
+      "value": 0.0004731765
+    },
+    {
+      "name": "Cubic mile",
+      "unit": "mi3",
+      "value": 4168181825.4
+    },
+    {
+      "name": "Cubic yard",
+      "unit": "yd3",
+      "value": 0.764554858
+    },
+    {
+      "name": "Cubic foot",
+      "unit": "ft3",
+      "value": 0.0283168466
+    },
+    {
+      "name": "Cubic inch",
+      "unit": "in3",
+      "value": 0.0000163871
+    }
+  ],
+  "masses": [
+    {
+      "name": "Kilogram",
+      "unit": "kg",
+      "value": 1000
+    },
+    {
+      "name": "Gram",
+      "unit": "gm",
+      "value": 1
+    },
+    {
+      "name": "Miligram",
+      "unit": "mg",
+      "value": 0.001
+    },
+    {
+      "name": "Ton",
+      "unit": "tn",
+      "value": 1000000
+    },
+    {
+      "name": "Pound",
+      "unit": "lb",
+      "value": 453.59237
+    },
+    {
+      "name": "Ounce",
+      "unit": "oz",
+      "value": 28.349523125
+    },
+    {
+      "name": "Quintal",
+      "unit": "qt",
+      "value": 100000
+    }
+  ],
+  "temperatures": [
+    {
+      "name": "Kelvin",
+      "unit": "K",
+      "value": 1
+    },
+    {
+      "name": "Celcius",
+      "unit": "C",
+      "value": 274.15
+    },
+    {
+      "name": "Farenheit",
+      "unit": "F",
+      "value": 255.92777778
+    },
+    {
+      "name": "Rankine",
+      "unit": "R",
+      "value": 0.5555555556
+    }
+  ]
+}
