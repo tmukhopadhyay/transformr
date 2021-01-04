@@ -5,12 +5,12 @@ spring:
         - id: currency-service
           uri: lb://currency-service
           predicates:
-            - Path=/currency/**
+            - Path=/api/currency/**
         - id: time-service
           uri: lb://time-service
           predicates:
-            - Path=/time/**
+            - Path=/api/time/**
         - id: unit-service
           uri: lb://unit-service
           predicates:
-            - Path=/unit/**
+            - Path=/api/unit/**

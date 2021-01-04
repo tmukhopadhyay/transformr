@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@RequestMapping(path = "/currency/api")
+@RequestMapping(path = "/api/currency")
 public @interface PublicRestController {
 
 }

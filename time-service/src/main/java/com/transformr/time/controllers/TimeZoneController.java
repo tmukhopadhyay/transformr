@@ -19,7 +19,7 @@ public class TimeZoneController {
 		this.timeZoneService = timeZoneService;
 	}
 
-	@GetMapping(path = "/time-zones")
+	@GetMapping(path = "/zones")
 	public Flux<TimeZoneDto> getTimeZones() {
 		return timeZoneService.getTimeZones();
 	}

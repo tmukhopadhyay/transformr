@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@RequestMapping(path = "/unit/api")
+@RequestMapping(path = "/api/unit")
 public @interface PublicRestController {
 
 }
