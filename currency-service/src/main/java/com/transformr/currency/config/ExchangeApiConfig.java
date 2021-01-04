@@ -12,4 +12,6 @@ public class ExchangeApiConfig {
 
 	private String baseUrl;
 	private String accessKey;
+	private String liveUrl;
+	private String listUrl;
 }

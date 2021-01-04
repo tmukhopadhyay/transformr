@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CurrencyDto {
 
-	private String currency;
-	private float value;
+	private String acronym;
+	private String name;
 }

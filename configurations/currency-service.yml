@@ -1,4 +1,6 @@
 exchange:
   api:
-    base-url: http://apilayer.net/api/live
+    base-url: http://api.currencylayer.com
     access-key: '{cipher}9d7515e7b5e804ae9d6933aaafe42c715a11c9fad805d40207f68b4def20941fc3f05ca13718b163b4a145ef73b247d7dcca779e9e7cbfb491ad850f8af9a9e1'
+    live-url: /live
+    list-url: /list

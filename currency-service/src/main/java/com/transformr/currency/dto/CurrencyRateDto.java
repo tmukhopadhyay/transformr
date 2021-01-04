@@ -1,7 +1,5 @@
 package com.transformr.currency.dto;
 
-import java.time.LocalDateTime;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ExchangeRateDto {
+public class CurrencyRateDto {
 
-	private CurrencyRateDto from;
-	private CurrencyRateDto to;
-	private LocalDateTime date;
+	private String currency;
+	private float value;
 }
