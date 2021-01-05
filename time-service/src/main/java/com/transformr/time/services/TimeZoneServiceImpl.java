@@ -3,9 +3,12 @@ package com.transformr.time.services;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 
 import org.springframework.stereotype.Service;
 
@@ -30,6 +33,7 @@ public class TimeZoneServiceImpl implements TimeZoneService {
 			.forEach(zoneId -> {
 				timeZones.add(new TimeZoneDto(
 					zoneId.getId(),
+					ZonedDateTime.of(now, zoneId).format(DateTimeFormatter.ofPattern("zzz", Locale.getDefault())),
 					Float.parseFloat(getOffset(now, zoneId).replace(":", ".")),
 					String.format("%s (UTC%s)", zoneId.getId(), getOffset(now, zoneId))
 				));
