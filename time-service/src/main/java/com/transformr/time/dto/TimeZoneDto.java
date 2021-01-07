@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TimeZoneDto {
 
+	private int id;
 	private String name;
 	private String abbreviation;
 	private float offset;

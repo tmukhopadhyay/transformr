@@ -5,6 +5,7 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -31,11 +32,23 @@ public class TimeZoneServiceImpl implements TimeZoneService {
 			.sorted(new ZoneComparator())
 			.filter(zoneId -> shouldTimeZoneDisplay(zoneId))
 			.forEach(zoneId -> {
+				String offset = getOffset(now, zoneId);
+				String[] offsetParts = offset.split(":");
+				float offsetHours = Float.parseFloat(offsetParts[0]);
+				float minutesToHours = Float.parseFloat(offsetParts[1]) / 60;
+
+				if(offsetHours < 0) {
+					offsetHours = -(Math.abs(offsetHours) + minutesToHours);
+				} else {
+					offsetHours += minutesToHours;
+				}
+
 				timeZones.add(new TimeZoneDto(
-					zoneId.getId(),
+					timeZones.size() + 1,
+					zoneId.getDisplayName(TextStyle.FULL, Locale.getDefault()),
 					ZonedDateTime.of(now, zoneId).format(DateTimeFormatter.ofPattern("zzz", Locale.getDefault())),
-					Float.parseFloat(getOffset(now, zoneId).replace(":", ".")),
-					String.format("%s (UTC%s)", zoneId.getId(), getOffset(now, zoneId))
+					offsetHours,
+					String.format("%s (UTC%s)", zoneId.getId(), offset)
 				));
 			});
 
