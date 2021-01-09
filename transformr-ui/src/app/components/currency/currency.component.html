@@ -1,0 +1,50 @@
+<mat-card class="exchange-card">
+  <mat-card-header>
+    <figure mat-card-avatar>
+      <mat-icon>monetization_on</mat-icon>
+    </figure>
+    <mat-card-title>Currency converter</mat-card-title>
+    <mat-card-subtitle>Get live exchange rates</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="form" [formGroup]="currencyExchangeForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>Amount</mat-label>
+        <mat-icon matPrefix>attach_money</mat-icon>
+        <input type="number" matInput required formControlName="fromAmount" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>From currency</mat-label>
+        <mat-icon matPrefix>flag</mat-icon>
+        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="fromCurrency">
+          <mat-option *ngFor="let currency of currencyList$ | async" [value]="currency.acronym">
+            {{ currency.name }} ({{ currency.acronym }})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-icon-button class="exchange-icon" (click)="exchangeValues();">
+        <mat-icon>import_export</mat-icon>
+      </button>
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>To currency</mat-label>
+        <mat-icon matPrefix>flag</mat-icon>
+        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="toCurrency">
+          <mat-option
+            *ngFor="let currency of currencyList$ | async"
+            [value]="currency.acronym"
+            >{{ currency.name }} ({{ currency.acronym }})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-flat-button class="submit-button" color="primary" type="submit" [disabled]="!currencyExchangeForm.valid">
+        Convert <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </form>
+  </mat-card-content>
+  <mat-card-footer *ngIf="exchangeRate">
+    <h3 class="mat-card-footer-note from">{{exchangeRate.from.value | number:'0.0-2'}} {{exchangeRate.from.currency}} =</h3>
+    <h2 class="mat-card-footer-note to">
+      <span class="value">{{exchangeRate.to.value | number:'0.0-2'}}</span> {{exchangeRate.to.currency}}
+    </h2>
+  </mat-card-footer>
+</mat-card>

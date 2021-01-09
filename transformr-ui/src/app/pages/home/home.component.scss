@@ -1,0 +1,40 @@
+.desktop-mode {
+  .app-length,
+  .app-temperature {
+    .mat-card {
+      background-color: #f5f5f5;
+    }
+  }
+
+  &.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px 15px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 30px auto;
+  }
+}
+
+.mobile-mode {
+  &.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 15px;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+.block-grey {
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

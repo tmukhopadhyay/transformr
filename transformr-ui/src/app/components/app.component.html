@@ -1,0 +1,4 @@
+<router-outlet (activate)="onRouteActivate()"></router-outlet>
+<div *ngIf="isLoading" class="spinner-container">
+  <mat-spinner diameter="80" strokeWidth="4"></mat-spinner>
+</div>

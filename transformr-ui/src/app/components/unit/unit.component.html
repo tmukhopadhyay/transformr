@@ -1,0 +1,57 @@
+<mat-card class="unit-card">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <mat-icon>{{icon}}</mat-icon>
+    </div>
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>{{subTitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="form" [formGroup]="unitConverterForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>Value</mat-label>
+        <input type="number" matInput required formControlName="fromUnitValue" />
+        <mat-icon matPrefix>edit</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>From unit</mat-label>
+        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="fromUnitId">
+          <mat-option
+            *ngFor="let unit of units"
+            [value]="unit.id"
+            >{{ unit.name }}
+          </mat-option>
+        </mat-select>
+        <mat-icon matPrefix>menu_open</mat-icon>
+      </mat-form-field>
+      <button mat-icon-button class="exchange-icon" (click)="exchangeValues()">
+        <mat-icon>import_export</mat-icon>
+      </button>
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>To unit</mat-label>
+        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="toUnitId">
+          <mat-option
+            *ngFor="let unit of units"
+            [value]="unit.id"
+            >{{ unit.name }}
+          </mat-option>
+        </mat-select>
+        <mat-icon matPrefix>menu_open</mat-icon>
+      </mat-form-field>
+      <button mat-flat-button class="submit-button" color="primary" type="submit" [disabled]="!unitConverterForm.valid">
+        Convert <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </form>
+  </mat-card-content>
+  <mat-card-footer *ngIf="fromUnit && toUnit">
+    <h3 class="mat-card-footer-note from">{{unitConverterForm.value.fromUnitValue | number:'0.0-20'}} {{fromUnit.unit}} =</h3>
+    <h2 class="mat-card-footer-note to">
+      <span class="value" [ngClass]="{
+        'large': unitConverterForm.value.toUnitValue.toString().length > 10,
+        'medium': unitConverterForm.value.toUnitValue.toString().length > 6 && unitConverterForm.value.toUnitValue.toString().length < 10
+      }">
+        {{unitConverterForm.value.toUnitValue | number:'0.0-16'}}
+      </span> {{toUnit.unit}}
+    </h2>
+  </mat-card-footer>
+</mat-card>

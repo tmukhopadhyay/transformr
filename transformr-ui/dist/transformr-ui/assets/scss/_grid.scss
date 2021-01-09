@@ -1,0 +1,20 @@
+$columns: 12;
+
+.grid {
+  display: flex !important;
+  width: 100%;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: (100% * $i) / $columns;
+    }
+  }
+
+  &.align-vertical {
+    flex-direction: column;
+  }
+
+  &.align-horizontal {
+    flex-direction: row;
+  }
+}

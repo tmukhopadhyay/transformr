@@ -3,8 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'transformr';
+  public isLoading = true;
+
+  public onRouteActivate() {
+    this.isLoading = false;
+  }
 }

@@ -1,0 +1,282 @@
+{
+  "lengths": [
+    {
+      "id": "fc9c7629-e760-4b18-a35d-3a86525335b2",
+      "name": "Centimeter",
+      "unit": "cm",
+      "value": 0.01
+    },
+    {
+      "id": "b303626a-9777-46a2-a2c0-93bc5556896f",
+      "name": "Foot",
+      "unit": "ft",
+      "value": 0.3048
+    },
+    {
+      "id": "7ec7dd8a-0e67-47fa-87bf-de5d2873308c",
+      "name": "Inch",
+      "unit": "in",
+      "value": 0.0254
+    },
+    {
+      "id": "99317f2a-8eb0-46b6-88d6-5ae8c851c1ef",
+      "name": "Kilometre",
+      "unit": "km",
+      "value": 1000
+    },
+    {
+      "id": "7be8a104-f78a-4b7a-a1bf-0d4c4a40ce73",
+      "name": "League",
+      "unit": "lg",
+      "value": 4828.032
+    },
+    {
+      "id": "9a8e2f0a-91a7-44e5-95fa-688fb19666a1",
+      "name": "Light Year",
+      "unit": "ly",
+      "value": 9460660000000000
+    },
+    {
+      "id": "8d9838e4-1a51-4f41-bced-06884edfdb09",
+      "name": "Metre",
+      "unit": "mt",
+      "value": 1
+    },
+    {
+      "id": "ba21217b-6a2f-4255-9ef7-0eda9e91585c",
+      "name": "Micron",
+      "unit": "mr",
+      "value": 0.000001
+    },
+    {
+      "id": "2f9032c7-8d34-4f37-a20d-8a8baad449e4",
+      "name": "Mile",
+      "unit": "mi",
+      "value": 1609.35
+    },
+    {
+      "id": "35df824a-ebf9-4c7f-a7f6-779c659ceec8",
+      "name": "Milimeter",
+      "unit": "mm",
+      "value": 0.001
+    },
+    {
+      "id": "538af22f-2ce8-4b74-ae6a-fd5b5eec9971",
+      "name": "Nanometer",
+      "unit": "nm",
+      "value": 1e-9
+    },
+    {
+      "id": "2e3740ad-64b3-4498-93ba-abf3315b71cd",
+      "name": "Nautical Mile",
+      "unit": "na",
+      "value": 4828.032
+    },
+    {
+      "id": "31467b0b-3cc5-485f-a502-71b60d042e0e",
+      "name": "Yard",
+      "unit": "yd",
+      "value": 0.9144
+    }
+  ],
+  "areas": [
+    {
+      "id": "aef0df3d-897e-4a5f-8396-a0d575f3dc71",
+      "name": "Acre",
+      "unit": "ac",
+      "value": 4046.8564224
+    },
+    {
+      "id": "ecc46f8f-ecc3-4685-962d-3d011a0cd5bd",
+      "name": "Hectare",
+      "unit": "ha",
+      "value": 10000
+    },
+    {
+      "id": "9f041fd6-d663-43f0-b6ac-09d451197ce4",
+      "name": "Square centimeter",
+      "unit": "cm2",
+      "value": 0.0001
+    },
+    {
+      "id": "b29c83f7-f0fe-4495-90f2-864ffd614cd1",
+      "name": "Square foot",
+      "unit": "ft2",
+      "value": 0.09290304
+    },
+    {
+      "id": "d19bd3d9-3461-48ac-868b-a3fc25ac5a3d",
+      "name": "Square inch",
+      "unit": "in2",
+      "value": 0.00064516
+    },
+    {
+      "id": "39e41860-7f06-4418-8697-574e12b903e7",
+      "name": "Square kilometer",
+      "unit": "km2",
+      "value": 1000000
+    },
+    {
+      "id": "d813ea68-469d-4fc2-82dc-002bdb6c1e18",
+      "name": "Square meter",
+      "unit": "mt2",
+      "value": 1
+    },
+    {
+      "id": "49265c46-1f83-4cee-b3f6-4f1da6a86f46",
+      "name": "Square mile",
+      "unit": "mi2",
+      "value": 2589988.1103
+    },
+    {
+      "id": "e50ce2e4-6b34-4515-83b3-818a39af287b",
+      "name": "Square milimeter",
+      "unit": "mm2",
+      "value": 0.000001
+    },
+    {
+      "id": "8dae2194-d9a3-41f1-bdf7-bfa745a7448c",
+      "name": "Square yard",
+      "unit": "yd2",
+      "value": 0.83612736
+    }
+  ],
+  "volumes": [
+    {
+      "id": "08c30a4b-401f-4996-aa29-02a6061f6a0a",
+      "name": "Cubic centimeter",
+      "unit": "cm3",
+      "value": 0.000001
+    },
+    {
+      "id": "c24d1c2b-5394-44d3-9a22-93d6e7f9c181",
+      "name": "Cubic foot",
+      "unit": "ft3",
+      "value": 0.0283168466
+    },
+    {
+      "id": "70a1061b-30a6-4843-826d-2c5b351fff0e",
+      "name": "Cubic inch",
+      "unit": "in3",
+      "value": 0.0000163871
+    },
+    {
+      "id": "296dd5c3-e9e0-4df7-8018-48a4941e2a19",
+      "name": "Cubic kilometer",
+      "unit": "km3",
+      "value": 1000000000
+    },
+    {
+      "id": "e7f8c183-6a49-4a5b-b1ec-0e7bddf4be3e",
+      "name": "Cubic meter",
+      "unit": "mt3",
+      "value": 1
+    },
+    {
+      "id": "1146ce6a-c4c7-4a1f-b841-7e1430b31b84",
+      "name": "Cubic mile",
+      "unit": "mi3",
+      "value": 4168181825.4
+    },
+    {
+      "id": "9c8df03b-cd4a-4dda-ac34-5b254c25c1dd",
+      "name": "Cubic yard",
+      "unit": "yd3",
+      "value": 0.764554858
+    },
+    {
+      "id": "0578b9bb-f4a6-4892-80e9-2521e64ddc4b",
+      "name": "Gallon",
+      "unit": "gl",
+      "value": 0.0037854118
+    },
+    {
+      "id": "e9aac0bc-fe05-4ddd-a496-22c703aa3712",
+      "name": "Litre",
+      "unit": "lt",
+      "value": 0.001
+    },
+    {
+      "id": "14720003-7e32-4998-a88b-3a86385ad061",
+      "name": "Mililiter",
+      "unit": "ml",
+      "value": 0.000001
+    },
+    {
+      "id": "b8111e25-2d1c-4666-8490-2cfcec4edbe9",
+      "name": "Pint",
+      "unit": "pt",
+      "value": 0.0004731765
+    }
+  ],
+  "masses": [
+    {
+      "id": "0d50afec-16d4-40b9-80b9-88e262a0921a",
+      "name": "Gram",
+      "unit": "gm",
+      "value": 1
+    },
+    {
+      "id": "66046a78-bcee-48d4-8d2f-866f6469f817",
+      "name": "Kilogram",
+      "unit": "kg",
+      "value": 1000
+    },
+    {
+      "id": "8e2d6670-b9da-4a04-8381-e59237f9b5c6",
+      "name": "Miligram",
+      "unit": "mg",
+      "value": 0.001
+    },
+    {
+      "id": "8436fea3-9dd0-4213-bc3e-50c4366ee0b4",
+      "name": "Ounce",
+      "unit": "oz",
+      "value": 28.349523125
+    },
+    {
+      "id": "fd7c7e79-d085-470a-9884-4a76f59cd585",
+      "name": "Pound",
+      "unit": "lb",
+      "value": 453.59237
+    },
+    {
+      "id": "065bd1fe-5af6-4fc7-a7ab-27d7cf985429",
+      "name": "Quintal",
+      "unit": "qt",
+      "value": 100000
+    },
+    {
+      "id": "8248963d-9959-4e73-a85c-0988918b309c",
+      "name": "Ton",
+      "unit": "tn",
+      "value": 1000000
+    }
+  ],
+  "temperatures": [
+    {
+      "id": "10c2467a-72b4-41f1-a937-dfa45f545e60",
+      "name": "Celcius",
+      "unit": "C",
+      "value": 274.15
+    },
+    {
+      "id": "67654f8f-d261-431e-9f43-602cc2ced7a3",
+      "name": "Farenheit",
+      "unit": "F",
+      "value": 255.92777778
+    },
+    {
+      "id": "03718231-db3b-4e1e-8c1b-2a3a572eaf7c",
+      "name": "Kelvin",
+      "unit": "K",
+      "value": 1
+    },
+    {
+      "id": "731dfdd9-6253-4ef7-8a9a-e57e762ddbdf",
+      "name": "Rankine",
+      "unit": "R",
+      "value": 0.5555555556
+    }
+  ]
+}

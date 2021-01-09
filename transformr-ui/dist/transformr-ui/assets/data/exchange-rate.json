@@ -1,0 +1,11 @@
+{
+  "from": {
+    "currency": "USD",
+    "value": 1
+  },
+  "to": {
+    "currency": "INR",
+    "value": 73.5678
+  },
+  "date": 1610105149241
+}

@@ -1,0 +1,46 @@
+$offset: 187;
+$duration: 1.2s;
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: $offset;
+  }
+  50% {
+    stroke-dashoffset: $offset/4;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: $offset;
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.spinner {
+  stroke: #673ab7;
+  animation: rotate $duration linear infinite;
+  transform-origin: center center;
+
+  .path {
+    stroke-dasharray: $offset;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: dash $duration ease-in-out infinite;
+  }
+}
