@@ -1,5 +1,6 @@
 package com.transformr.unit.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,8 +54,11 @@ public class UnitServiceImpl implements UnitService {
 			case TEMPERATURE:
 				units = metricUnitDto.getTemperatures();
 				break;
+			default:
+				units = new ArrayList<>();
+				break;
 		}
 
-		units.add(new UnitDto(unit.getName(), unit.getUnit(), unit.getValue()));
+		units.add(new UnitDto(unit.getId().toString(), unit.getName(), unit.getUnit(), unit.getValue()));
 	}
 }

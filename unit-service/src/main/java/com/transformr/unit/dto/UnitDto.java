@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UnitDto {
 
+	private String id;
 	private String name;
 	private String unit;
 	private double value;
