@@ -12,6 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -22,12 +23,12 @@ import {
   CurrencyComponent,
   FooterComponent,
   HeaderComponent,
+  HomeComponent,
   TimeComponent,
   UnitComponent,
 } from './components';
-import { HomeComponent } from './pages';
 import { DataStore } from './store';
-import { HttpService } from './services';
+import { HttpService, UtilityService } from './services';
 
 @NgModule({
   declarations: [
@@ -52,13 +53,14 @@ import { HttpService } from './services';
     MatDividerModule,
     MatIconModule,
     MatFormFieldModule,
+    MatListModule,
     MatInputModule,
     MatProgressSpinnerModule,
     MatSelectModule,
     MatSidenavModule,
     AppRoutingModule,
   ],
-  providers: [HttpService, DataStore],
+  providers: [DataStore, HttpService, UtilityService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

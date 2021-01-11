@@ -1,0 +1,41 @@
+<div *ngIf="isMobile" class="content-grid mobile-mode">
+  <a mat-raised-button class="navigation-button" routerLink="/currency">
+    <mat-icon>monetization_on</mat-icon>
+    <p class="caption"><span>Currency</span><span>Converter</span></p>
+  </a>
+  <a mat-raised-button class="navigation-button" routerLink="/time">
+    <mat-icon>hourglass_empty</mat-icon>
+    <p class="caption"><span>Time</span><span>Converter</span></p>
+  </a>
+  <a mat-raised-button class="navigation-button" routerLink="/length">
+    <mat-icon>open_in_full</mat-icon>
+    <p class="caption"><span>Length</span><span>Converter</span></p>
+  </a>
+  <a mat-raised-button class="navigation-button" routerLink="/area">
+    <mat-icon>aspect_ratio</mat-icon>
+    <p class="caption"><span>Area</span><span>Converter</span></p>
+  </a>
+  <a mat-raised-button class="navigation-button" routerLink="/volume">
+    <mat-icon>ac_unit</mat-icon>
+    <p class="caption"><span>Volume</span><span>Converter</span></p>
+  </a>
+  <a mat-raised-button class="navigation-button" routerLink="/mass">
+    <mat-icon>fitness_center</mat-icon>
+    <p class="caption"><span>Mass</span><span>Converter</span></p>
+  </a>
+  <a mat-raised-button class="navigation-button" routerLink="/temperature">
+    <mat-icon>equalizer</mat-icon>
+    <p class="caption"><span>Temperature</span><span>Converter</span></p>
+  </a>
+</div>
+
+<div *ngIf="!isMobile" class="content-grid desktop-mode">
+  <app-currency class="app-currency" [isMobile]="false"></app-currency>
+  <app-time class="app-time" [isMobile]="false"></app-time>
+  <app-unit class="app-length" [isMobile]="false" type="length"></app-unit>
+  <app-unit class="app-area" [isMobile]="false" type="area"></app-unit>
+  <app-unit class="app-volume" [isMobile]="false" type="volume"></app-unit>
+  <figure class="block-grey"></figure>
+  <app-unit class="app-mass" [isMobile]="false" type="mass"></app-unit>
+  <app-unit class="app-temperature" [isMobile]="false" type="temperature"></app-unit>
+</div>

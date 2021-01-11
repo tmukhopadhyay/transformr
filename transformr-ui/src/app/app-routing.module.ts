@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CurrencyComponent, TimeComponent, UnitComponent } from './components';
+import {
+  CurrencyComponent,
+  HomeComponent,
+  TimeComponent,
+  UnitComponent,
+} from './components';
 import { DataLoadedGuard } from './guards';
-import { HomeComponent } from './pages';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [DataLoadedGuard] },

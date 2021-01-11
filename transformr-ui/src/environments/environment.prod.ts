@@ -1,12 +1,12 @@
-const serverBaseUrl = 'http://localhost:8001/api';
+const serverBaseUrl = 'assets/data/';
 
 export const environment = {
   mobileMaxWidth: 768,
-  production: true,
+  production: false,
   url: {
-    currencyList: serverBaseUrl + '/currency',
-    exchangeRate: serverBaseUrl + '/currency/exchange',
-    timeZones: serverBaseUrl + '/time/zones',
-    unitMetrics: serverBaseUrl + '/unit/metrics'
+    currencyList: serverBaseUrl + '/currency-list.json',
+    exchangeRate: serverBaseUrl + '/exchange-rate.json',
+    timeZones: serverBaseUrl + '/time-zones.json',
+    unitMetrics: serverBaseUrl + '/metric-units.json'
   }
 };

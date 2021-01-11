@@ -10,7 +10,7 @@
     <form class="form" [formGroup]="unitConverterForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="col-12">
         <mat-label>Value</mat-label>
-        <input type="number" matInput required formControlName="fromUnitValue" />
+        <input type="number" matInput required formControlName="fromUnitValue" autocomplete="off" />
         <mat-icon matPrefix>edit</mat-icon>
       </mat-form-field>
       <mat-form-field appearance="outline" class="col-12">

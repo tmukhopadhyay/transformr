@@ -1,4 +1,60 @@
-<router-outlet (activate)="onRouteActivate()"></router-outlet>
-<div *ngIf="isLoading" class="spinner-container">
-  <mat-spinner diameter="80" strokeWidth="4"></mat-spinner>
+<mat-sidenav-container *ngIf="isMobile">
+  <mat-sidenav #sidenav mode="push" closed>
+    <mat-list role="list">
+      <a mat-list-item routerLink="/currency" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>monetization_on</mat-icon>
+        <span mat-line>Currency Converter</span>
+        <mat-divider></mat-divider>
+      </a>
+      <a mat-list-item routerLink="/time" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>hourglass_empty</mat-icon>
+        <span mat-line>Time Converter</span>
+        <mat-divider></mat-divider>
+      </a>
+      <a mat-list-item routerLink="/length" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>open_in_full</mat-icon>
+        <span mat-line>Length Converter</span>
+        <mat-divider></mat-divider>
+      </a>
+      <a mat-list-item routerLink="/area" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>aspect_ratio</mat-icon>
+        <span mat-line>Area Converter</span>
+        <mat-divider></mat-divider>
+      </a>
+      <a mat-list-item routerLink="/volume" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>ac_unit</mat-icon>
+        <span mat-line>Volume Converter</span>
+        <mat-divider></mat-divider>
+      </a>
+      <a mat-list-item routerLink="/mass" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>fitness_center</mat-icon>
+        <span mat-line>Mass Converter</span>
+        <mat-divider></mat-divider>
+      </a>
+      <a mat-list-item routerLink="/temperature" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>equalizer</mat-icon>
+        <span mat-line>Temperature Converter</span>
+        <mat-divider></mat-divider>
+      </a>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (onToggleBtnClick)="sidenav.toggle()"></app-header>
+    <router-outlet (activate)="onRouteActivate()"></router-outlet>
+    <ng-container *ngTemplateOutlet="loader"></ng-container>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div *ngIf="!isMobile" class="app-wrapper">
+  <app-header></app-header>
+  <router-outlet (activate)="onRouteActivate()"></router-outlet>
+  <ng-container *ngTemplateOutlet="loader"></ng-container>
+  <app-footer></app-footer>
 </div>
+
+<ng-template #loader>
+  <div *ngIf="isLoading" class="spinner-container">
+    <mat-spinner diameter="80" strokeWidth="4"></mat-spinner>
+  </div>
+</ng-template>
