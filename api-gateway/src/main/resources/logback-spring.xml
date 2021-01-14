@@ -11,9 +11,9 @@
 	</appender>
 
 	<appender name="Stash" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/${APP_NAME}.log</file>
+		<file>/logs/${APP_NAME}.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>logs/${APP_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<fileNamePattern>/logs/${APP_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
 		</rollingPolicy>
 		<encoder class="net.logstash.logback.encoder.LogstashEncoder" />
 	</appender>

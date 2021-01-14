@@ -4,6 +4,8 @@ services:
     build: discovery-service
     ports:
       - 8761:8761
+    volumes:
+      - ./discovery-service/logs:/logs
     networks:
       - api-network
     environment:
@@ -16,6 +18,7 @@ services:
         condition: service_healthy
     volumes:
       - ./configurations:/var/configurations
+      - ./config-service/logs:/logs
     ports:
       - 8888:8888
     networks:
@@ -35,6 +38,8 @@ services:
         condition: service_healthy
     ports:
       - 8001:8001
+    volumes:
+      - ./api-gateway/logs:/logs
     networks:
       - api-network
     environment:
@@ -52,6 +57,8 @@ services:
         condition: service_healthy
     ports:
       - 8002:8002
+    volumes:
+      - ./currency-service/logs:/logs
     networks:
       - api-network
     environment:
@@ -69,6 +76,8 @@ services:
         condition: service_healthy
     ports:
       - 8003:8003
+    volumes:
+      - ./time-service/logs:/logs
     networks:
       - api-network
     environment:
@@ -86,6 +95,8 @@ services:
         condition: service_healthy
     ports:
       - 8004:8004
+    volumes:
+      - ./unit-service/logs:/logs
     networks:
       - api-network
     environment:
