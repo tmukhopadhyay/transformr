@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+
+	<Property name="APP_NAME" value="currency-service" />
+
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%black(%d{${DATE_FORMAT}}) %highlight(%-5level) [%blue(%t)] %yellow(%C{0}): %green(%X{joinPoint}): %msg%n%throwable</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="Stash" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/${APP_NAME}.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/${APP_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+		</rollingPolicy>
+		<encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+	</appender>
+
+	<root level="INFO">
+	    <appender-ref ref="Console" />
+	    <appender-ref ref="Stash" />
+	</root>
+
+</configuration>
