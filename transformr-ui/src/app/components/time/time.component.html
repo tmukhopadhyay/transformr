@@ -10,18 +10,17 @@
     <form class="form" [formGroup]="timeConverterForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="col-12">
         <mat-label>Date / Time</mat-label>
-        <input type="datetime-local" matInput required formControlName="fromTime" />
+        <input type="datetime-local" matInput required formControlName="fromTime" placeholder="Date / Time" />
         <mat-icon matPrefix>access_time</mat-icon>
       </mat-form-field>
       <mat-form-field appearance="outline" class="col-12">
         <mat-label>From time zone</mat-label>
-        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="fromZoneId">
-          <mat-option
-            *ngFor="let timeZone of timeZones"
-            [value]="timeZone.id"
-            >{{ timeZone.value }}
-          </mat-option>
+        <mat-select *ngIf="!isMobile" required formControlName="fromZoneId">
+          <mat-option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</mat-option>
         </mat-select>
+        <select *ngIf="isMobile" matNativeControl required formControlName="fromZoneId">
+          <option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</option>
+        </select>
         <mat-icon matPrefix>edit_location_alt</mat-icon>
       </mat-form-field>
       <button mat-icon-button class="exchange-icon" (click)="exchangeValues();">
@@ -29,13 +28,12 @@
       </button>
       <mat-form-field appearance="outline" class="col-12">
         <mat-label>To time zone</mat-label>
-        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="toZoneId">
-          <mat-option
-            *ngFor="let timeZone of timeZones"
-            [value]="timeZone.id"
-            >{{ timeZone.value }}
-          </mat-option>
+        <mat-select *ngIf="!isMobile" required formControlName="toZoneId">
+          <mat-option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</mat-option>
         </mat-select>
+        <select *ngIf="isMobile" matNativeControl required formControlName="toZoneId">
+          <option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</option>
+        </select>
         <mat-icon matPrefix>edit_location_alt</mat-icon>
       </mat-form-field>
       <button mat-flat-button class="submit-button" color="primary" type="submit" [disabled]="!timeConverterForm.valid">

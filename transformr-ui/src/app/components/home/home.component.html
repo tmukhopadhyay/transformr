@@ -30,12 +30,12 @@
 </div>
 
 <div *ngIf="!isMobile" class="content-grid desktop-mode">
-  <app-currency class="app-currency" [isMobile]="false"></app-currency>
-  <app-time class="app-time" [isMobile]="false"></app-time>
-  <app-unit class="app-length" [isMobile]="false" type="length"></app-unit>
-  <app-unit class="app-area" [isMobile]="false" type="area"></app-unit>
-  <app-unit class="app-volume" [isMobile]="false" type="volume"></app-unit>
+  <app-currency class="app-currency"></app-currency>
+  <app-time class="app-time"></app-time>
+  <app-unit class="app-length" type="length"></app-unit>
+  <app-unit class="app-area" type="area"></app-unit>
+  <app-unit class="app-volume" type="volume"></app-unit>
   <figure class="block-grey"></figure>
-  <app-unit class="app-mass" [isMobile]="false" type="mass"></app-unit>
-  <app-unit class="app-temperature" [isMobile]="false" type="temperature"></app-unit>
+  <app-unit class="app-mass" type="mass"></app-unit>
+  <app-unit class="app-temperature" type="temperature"></app-unit>
 </div>

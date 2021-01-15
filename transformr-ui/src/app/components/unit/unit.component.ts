@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
+import { UtilityService } from '../../services';
 import { MetricUnit, Unit } from '../../models';
 import { DataStore } from '../../store';
 
@@ -12,9 +13,9 @@ import { DataStore } from '../../store';
 })
 export class UnitComponent implements OnInit {
 
-  @Input() public isMobile: boolean = false;
   @Input() public type: string | undefined;
 
+  public isMobile: boolean;
   public title: string = '';
   public subTitle: string = '';
   public icon: string = '';
@@ -31,8 +32,11 @@ export class UnitComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private dataStore: DataStore
-  ) { }
+    private dataStore: DataStore,
+    private utilityService: UtilityService
+  ) {
+    this.isMobile = this.utilityService.isMobile();
+  }
 
   ngOnInit() {
     this.route.data.subscribe(data => {

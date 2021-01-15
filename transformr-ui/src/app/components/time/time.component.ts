@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import * as moment from 'moment';
 
+import { UtilityService } from '../../services';
 import { TimeZone } from '../../models';
 import { DataStore } from '../../store';
 
@@ -12,8 +13,7 @@ import { DataStore } from '../../store';
 })
 export class TimeComponent implements OnInit {
 
-  @Input() public isMobile: boolean = false;
-
+  public isMobile: boolean;
   public timeZones: Array<TimeZone> = [];
   public fromTimeZone: TimeZone | undefined;
   public toTimeZone: TimeZone | undefined;
@@ -26,7 +26,12 @@ export class TimeComponent implements OnInit {
     toZoneId: new FormControl('')
   });
 
-  constructor(private dataStore: DataStore) { }
+  constructor(
+    private dataStore: DataStore,
+    private utilityService: UtilityService
+  ) {
+    this.isMobile = this.utilityService.isMobile();
+  }
 
   ngOnInit() {
     this.dataStore.timeZones$.subscribe((timeZones: Array<TimeZone>) => this.timeZones = timeZones);

@@ -11,16 +11,21 @@
       <mat-form-field appearance="outline" class="col-12">
         <mat-label>Amount</mat-label>
         <mat-icon matPrefix>attach_money</mat-icon>
-        <input type="number" matInput required formControlName="fromAmount"  autocomplete="off" />
+        <input type="number" matInput required formControlName="fromAmount" autocomplete="off" />
       </mat-form-field>
       <mat-form-field appearance="outline" class="col-12">
         <mat-label>From currency</mat-label>
         <mat-icon matPrefix>flag</mat-icon>
-        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="fromCurrency">
+        <mat-select *ngIf="!isMobile" required formControlName="fromCurrency">
           <mat-option *ngFor="let currency of currencyList$ | async" [value]="currency.acronym">
             {{ currency.name }} ({{ currency.acronym }})
           </mat-option>
         </mat-select>
+        <select *ngIf="isMobile" required matNativeControl formControlName="fromCurrency">
+          <option *ngFor="let currency of currencyList$ | async" [value]="currency.acronym">
+            {{ currency.name }} ({{ currency.acronym }})
+          </option>
+        </select>
       </mat-form-field>
       <button mat-icon-button class="exchange-icon" (click)="exchangeValues();">
         <mat-icon>import_export</mat-icon>
@@ -28,13 +33,16 @@
       <mat-form-field appearance="outline" class="col-12">
         <mat-label>To currency</mat-label>
         <mat-icon matPrefix>flag</mat-icon>
-        <mat-select required [attr.matNativeControl]="isMobile ? '' : null" formControlName="toCurrency">
-          <mat-option
-            *ngFor="let currency of currencyList$ | async"
-            [value]="currency.acronym"
-            >{{ currency.name }} ({{ currency.acronym }})
+        <mat-select *ngIf="!isMobile" required formControlName="toCurrency">
+          <mat-option *ngFor="let currency of currencyList$ | async" [value]="currency.acronym">
+            {{ currency.name }} ({{ currency.acronym }})
           </mat-option>
         </mat-select>
+        <select *ngIf="isMobile" required matNativeControl formControlName="toCurrency">
+          <option *ngFor="let currency of currencyList$ | async" [value]="currency.acronym">
+            {{ currency.name }} ({{ currency.acronym }})
+          </option>
+        </select>
       </mat-form-field>
       <button mat-flat-button class="submit-button" color="primary" type="submit" [disabled]="!currencyExchangeForm.valid">
         Convert <mat-icon>keyboard_arrow_right</mat-icon>

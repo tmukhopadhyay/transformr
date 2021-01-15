@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 
 import { Currency, ExchangeRate } from '../../models';
 import { DataStore } from '../../store';
-import { HttpService } from '../../services';
+import { HttpService, UtilityService } from '../../services';
 
 @Component({
   selector: 'app-currency',
@@ -13,8 +13,7 @@ import { HttpService } from '../../services';
 })
 export class CurrencyComponent implements OnInit {
 
-  @Input() public isMobile: boolean = false;
-
+  public isMobile: boolean;
   public currencyList$: Observable<Array<Currency>> = of([]);
   public exchangeRate: ExchangeRate | undefined;
   public currencyExchangeForm = new FormGroup({
@@ -25,8 +24,11 @@ export class CurrencyComponent implements OnInit {
 
   constructor(
     private dataStore: DataStore,
-    private httpService: HttpService
-  ) {}
+    private httpService: HttpService,
+    private utilityService: UtilityService
+  ) {
+    this.isMobile = this.utilityService.isMobile();
+  }
 
   ngOnInit() {
     this.currencyList$ = this.dataStore.currencyList$;
