@@ -19,6 +19,7 @@
           <mat-option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</mat-option>
         </mat-select>
         <select *ngIf="isMobile" matNativeControl required formControlName="fromZoneId">
+          <option value="">Select from time zone</option>
           <option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</option>
         </select>
         <mat-icon matPrefix>edit_location_alt</mat-icon>
@@ -32,6 +33,7 @@
           <mat-option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</mat-option>
         </mat-select>
         <select *ngIf="isMobile" matNativeControl required formControlName="toZoneId">
+          <option value="">Select to time zone</option>
           <option *ngFor="let timeZone of timeZones" [value]="timeZone.id">{{ timeZone.value }}</option>
         </select>
         <mat-icon matPrefix>edit_location_alt</mat-icon>

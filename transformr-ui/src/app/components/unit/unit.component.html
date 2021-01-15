@@ -19,6 +19,7 @@
           <mat-option *ngFor="let unit of units" [value]="unit.id">{{ unit.name }}</mat-option>
         </mat-select>
         <select *ngIf="isMobile" matNativeControl required formControlName="fromUnitId">
+          <option value="">Select from unit</option>
           <option *ngFor="let unit of units" [value]="unit.id">{{ unit.name }}</option>
         </select>
         <mat-icon matPrefix>menu_open</mat-icon>
@@ -32,6 +33,7 @@
           <mat-option *ngFor="let unit of units" [value]="unit.id">{{ unit.name }}</mat-option>
         </mat-select>
         <select *ngIf="isMobile" matNativeControl required formControlName="toUnitId">
+          <option value="">Select to unit</option>
           <option *ngFor="let unit of units" [value]="unit.id">{{ unit.name }}</option>
         </select>
         <mat-icon matPrefix>menu_open</mat-icon>
