@@ -96,8 +96,8 @@ export class UnitComponent implements OnInit {
   public onSubmit() {
     const formValue = this.unitConverterForm.getRawValue();
 
-    this.fromUnit = this.units.find(u => u.id === formValue.fromUnitId);
-    this.toUnit = this.units.find(u => u.id === formValue.toUnitId);
+    this.fromUnit = this.units.find(u => u.id == formValue.fromUnitId);
+    this.toUnit = this.units.find(u => u.id == formValue.toUnitId);
 
     var baseValue = 0;
     if(this.fromUnit?.fromFormula) {

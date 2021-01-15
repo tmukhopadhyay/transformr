@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import * as moment from 'moment';
 
@@ -47,8 +47,8 @@ export class TimeComponent implements OnInit {
     const formValue = this.timeConverterForm.value;
     const fromTime = moment(formValue.fromTime, 'YYYY-MM-DDTHH:mm', true);
 
-    this.fromTimeZone = this.timeZones.find(t => t.id === formValue.fromZoneId);
-    this.toTimeZone = this.timeZones.find(t => t.id === formValue.toZoneId);
+    this.fromTimeZone = this.timeZones.find(t => t.id == formValue.fromZoneId);
+    this.toTimeZone = this.timeZones.find(t => t.id == formValue.toZoneId);
 
     const toTime = fromTime.clone().add((this.toTimeZone?.offset || 0) - (this.fromTimeZone?.offset || 0), 'h');
     this.timeConverterForm.controls['toTime'].setValue(toTime.format('YYYY-MM-DDTHH:mm'));
