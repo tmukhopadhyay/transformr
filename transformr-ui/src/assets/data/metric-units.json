@@ -1,282 +1,417 @@
 {
   "lengths": [
     {
-      "id": "fc9c7629-e760-4b18-a35d-3a86525335b2",
+      "id": "a43ef4d1-a000-46df-955b-a733fd80ca98",
       "name": "Centimeter",
       "unit": "cm",
-      "value": 0.01
+      "value": 0.01,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "b303626a-9777-46a2-a2c0-93bc5556896f",
+      "id": "d4403399-4a44-4ba1-8b49-9a5d08315afe",
       "name": "Foot",
       "unit": "ft",
-      "value": 0.3048
+      "value": 0.3048,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "7ec7dd8a-0e67-47fa-87bf-de5d2873308c",
+      "id": "01a6d12e-6343-4826-b452-08fde30cb995",
       "name": "Inch",
       "unit": "in",
-      "value": 0.0254
+      "value": 0.0254,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "99317f2a-8eb0-46b6-88d6-5ae8c851c1ef",
+      "id": "dcbff430-e92e-466b-b4ba-5bd88e9bb848",
       "name": "Kilometre",
       "unit": "km",
-      "value": 1000
+      "value": 1000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "7be8a104-f78a-4b7a-a1bf-0d4c4a40ce73",
+      "id": "9377fd7e-21ab-4f20-90a9-241f4dcb6132",
       "name": "League",
       "unit": "lg",
-      "value": 4828.032
+      "value": 4828.032,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "9a8e2f0a-91a7-44e5-95fa-688fb19666a1",
+      "id": "12967248-d425-422e-b322-ab98ea1ccc6f",
       "name": "Light Year",
       "unit": "ly",
-      "value": 9460660000000000
+      "value": 9460660000000000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "8d9838e4-1a51-4f41-bced-06884edfdb09",
+      "id": "b9a85091-c234-4686-a630-03f48be1c6b6",
       "name": "Metre",
       "unit": "mt",
-      "value": 1
+      "value": 1,
+      "base": true,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "ba21217b-6a2f-4255-9ef7-0eda9e91585c",
+      "id": "3fe58457-7eaa-4788-82ac-e666967733d2",
       "name": "Micron",
       "unit": "mr",
-      "value": 0.000001
+      "value": 0.000001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "2f9032c7-8d34-4f37-a20d-8a8baad449e4",
+      "id": "57eb8c96-38c1-4755-81ba-a08a814e4600",
       "name": "Mile",
       "unit": "mi",
-      "value": 1609.35
+      "value": 1609.35,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "35df824a-ebf9-4c7f-a7f6-779c659ceec8",
+      "id": "db254c0f-59ec-4969-8d7a-be6919eff441",
       "name": "Milimeter",
       "unit": "mm",
-      "value": 0.001
+      "value": 0.001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "538af22f-2ce8-4b74-ae6a-fd5b5eec9971",
+      "id": "6cf2fc7a-a876-442d-8a22-b0d773341f33",
       "name": "Nanometer",
       "unit": "nm",
-      "value": 1e-9
+      "value": 1e-9,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "2e3740ad-64b3-4498-93ba-abf3315b71cd",
+      "id": "a7d29724-a6bc-43cb-b840-bb23fcf0ccde",
       "name": "Nautical Mile",
       "unit": "na",
-      "value": 4828.032
+      "value": 4828.032,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "31467b0b-3cc5-485f-a502-71b60d042e0e",
+      "id": "f17b5f8e-9c20-499c-b634-554f659ebbaf",
       "name": "Yard",
       "unit": "yd",
-      "value": 0.9144
+      "value": 0.9144,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     }
   ],
   "areas": [
     {
-      "id": "aef0df3d-897e-4a5f-8396-a0d575f3dc71",
+      "id": "a13196d0-f2af-40cc-851a-115163b36312",
       "name": "Acre",
       "unit": "ac",
-      "value": 4046.8564224
+      "value": 4046.856422,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "ecc46f8f-ecc3-4685-962d-3d011a0cd5bd",
+      "id": "e5c7ae9a-dd75-40ee-9483-b2a15a622a98",
       "name": "Hectare",
       "unit": "ha",
-      "value": 10000
+      "value": 10000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "9f041fd6-d663-43f0-b6ac-09d451197ce4",
+      "id": "9944a586-d56b-4c75-b2d1-46291783d67e",
       "name": "Square centimeter",
       "unit": "cm2",
-      "value": 0.0001
+      "value": 0.0001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "b29c83f7-f0fe-4495-90f2-864ffd614cd1",
+      "id": "31b848fe-d29a-4834-a6ab-caef4e873595",
       "name": "Square foot",
       "unit": "ft2",
-      "value": 0.09290304
+      "value": 0.092903,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "d19bd3d9-3461-48ac-868b-a3fc25ac5a3d",
+      "id": "44bfae1c-117a-4dec-9a20-d2eb22ad9961",
       "name": "Square inch",
       "unit": "in2",
-      "value": 0.00064516
+      "value": 0.000645,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "39e41860-7f06-4418-8697-574e12b903e7",
+      "id": "1463895c-b273-40bf-a919-1661bf4700ed",
       "name": "Square kilometer",
       "unit": "km2",
-      "value": 1000000
+      "value": 1000000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "d813ea68-469d-4fc2-82dc-002bdb6c1e18",
+      "id": "109eb93c-2f85-4307-b9bf-02bb9fae98ec",
       "name": "Square meter",
       "unit": "mt2",
-      "value": 1
+      "value": 1,
+      "base": true,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "49265c46-1f83-4cee-b3f6-4f1da6a86f46",
+      "id": "75114f07-887d-4f05-a1de-39be1a684938",
       "name": "Square mile",
       "unit": "mi2",
-      "value": 2589988.1103
+      "value": 2589988.1103,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "e50ce2e4-6b34-4515-83b3-818a39af287b",
+      "id": "bc81e0b5-518b-4a43-b7ad-f0b93d3f87a5",
       "name": "Square milimeter",
       "unit": "mm2",
-      "value": 0.000001
+      "value": 0.000001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "8dae2194-d9a3-41f1-bdf7-bfa745a7448c",
+      "id": "3c826f90-0e14-4946-9622-0ff1d082afc9",
       "name": "Square yard",
       "unit": "yd2",
-      "value": 0.83612736
+      "value": 0.836127,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     }
   ],
   "volumes": [
     {
-      "id": "08c30a4b-401f-4996-aa29-02a6061f6a0a",
+      "id": "ce8897b2-450a-41a3-a6fb-e79c41046b83",
       "name": "Cubic centimeter",
       "unit": "cm3",
-      "value": 0.000001
+      "value": 0.000001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "c24d1c2b-5394-44d3-9a22-93d6e7f9c181",
+      "id": "1f73297b-b073-4eaf-a370-545f4db0ec42",
       "name": "Cubic foot",
       "unit": "ft3",
-      "value": 0.0283168466
+      "value": 0.028317,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "70a1061b-30a6-4843-826d-2c5b351fff0e",
+      "id": "eaf93d18-53ef-432a-b76a-de91a1ea89c8",
       "name": "Cubic inch",
       "unit": "in3",
-      "value": 0.0000163871
+      "value": 0.000016,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "296dd5c3-e9e0-4df7-8018-48a4941e2a19",
+      "id": "13825e86-52c5-4b71-bcb3-17e244571b01",
       "name": "Cubic kilometer",
       "unit": "km3",
-      "value": 1000000000
+      "value": 1000000000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "e7f8c183-6a49-4a5b-b1ec-0e7bddf4be3e",
+      "id": "b4861166-cb5a-4813-a602-bff82957dae7",
       "name": "Cubic meter",
       "unit": "mt3",
-      "value": 1
+      "value": 1,
+      "base": true,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "1146ce6a-c4c7-4a1f-b841-7e1430b31b84",
+      "id": "336b65f1-4ace-464e-a38d-5c7c1cb1e368",
       "name": "Cubic mile",
       "unit": "mi3",
-      "value": 4168181825.4
+      "value": 4168181825.4,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "9c8df03b-cd4a-4dda-ac34-5b254c25c1dd",
+      "id": "a18a2650-1493-48de-b91a-dac9767355c4",
       "name": "Cubic yard",
       "unit": "yd3",
-      "value": 0.764554858
+      "value": 0.764555,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "0578b9bb-f4a6-4892-80e9-2521e64ddc4b",
+      "id": "a5f44018-6b1b-4aa7-a3a2-32d041d04b5a",
       "name": "Gallon",
       "unit": "gl",
-      "value": 0.0037854118
+      "value": 0.003785,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "e9aac0bc-fe05-4ddd-a496-22c703aa3712",
+      "id": "8a55842c-9695-4ba0-bdb4-d9f0b87feba0",
       "name": "Litre",
       "unit": "lt",
-      "value": 0.001
+      "value": 0.001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "14720003-7e32-4998-a88b-3a86385ad061",
+      "id": "80b8b71a-4970-447c-a7f9-279112066249",
       "name": "Mililiter",
       "unit": "ml",
-      "value": 0.000001
+      "value": 0.000001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "b8111e25-2d1c-4666-8490-2cfcec4edbe9",
+      "id": "6d162e81-71b0-4a99-b703-95a3ccaaed87",
       "name": "Pint",
       "unit": "pt",
-      "value": 0.0004731765
+      "value": 0.000473,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     }
   ],
   "masses": [
     {
-      "id": "0d50afec-16d4-40b9-80b9-88e262a0921a",
+      "id": "eeff2a88-74d4-4c6b-be82-26999ef7727e",
       "name": "Gram",
       "unit": "gm",
-      "value": 1
+      "value": 1,
+      "base": true,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "66046a78-bcee-48d4-8d2f-866f6469f817",
+      "id": "006afeb6-b4f8-431b-bb29-e9ee7b4e68c3",
       "name": "Kilogram",
       "unit": "kg",
-      "value": 1000
+      "value": 1000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "8e2d6670-b9da-4a04-8381-e59237f9b5c6",
+      "id": "ec676508-9783-4936-bb5a-496198ff9e1e",
       "name": "Miligram",
       "unit": "mg",
-      "value": 0.001
+      "value": 0.001,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "8436fea3-9dd0-4213-bc3e-50c4366ee0b4",
+      "id": "ade4c404-3778-4b81-a116-20ee824ef3b4",
       "name": "Ounce",
       "unit": "oz",
-      "value": 28.349523125
+      "value": 28.349523,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "fd7c7e79-d085-470a-9884-4a76f59cd585",
+      "id": "08de7f6f-0129-42c2-b4b7-6515d2ff40b1",
       "name": "Pound",
       "unit": "lb",
-      "value": 453.59237
+      "value": 453.59237,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "065bd1fe-5af6-4fc7-a7ab-27d7cf985429",
+      "id": "cbd6dd45-0083-4027-8e35-47690b89df31",
       "name": "Quintal",
       "unit": "qt",
-      "value": 100000
+      "value": 100000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "8248963d-9959-4e73-a85c-0988918b309c",
+      "id": "3139353f-2eca-4937-a1ff-f1bf319cfb1e",
       "name": "Ton",
       "unit": "tn",
-      "value": 1000000
+      "value": 1000000,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     }
   ],
   "temperatures": [
     {
-      "id": "10c2467a-72b4-41f1-a937-dfa45f545e60",
+      "id": "e88d5f6a-6aba-4ff5-9f7c-4b36969512b6",
       "name": "Celcius",
       "unit": "C",
-      "value": 274.15
+      "value": 274.15,
+      "base": false,
+      "fromFormula": "x + 273.15",
+      "toFormula": "x - 273.15"
     },
     {
-      "id": "67654f8f-d261-431e-9f43-602cc2ced7a3",
+      "id": "cd99d461-f5b2-4063-a21c-904ca37d63d3",
       "name": "Farenheit",
       "unit": "F",
-      "value": 255.92777778
+      "value": 255.927778,
+      "base": false,
+      "fromFormula": "(x - 32) * 5 / 9 + 273.15",
+      "toFormula": "(x - 273.15) * 9 / 5 + 32"
     },
     {
-      "id": "03718231-db3b-4e1e-8c1b-2a3a572eaf7c",
+      "id": "fd0463e8-eda7-4755-bb61-cdbc8a606727",
       "name": "Kelvin",
       "unit": "K",
-      "value": 1
+      "value": 1,
+      "base": true,
+      "fromFormula": null,
+      "toFormula": null
     },
     {
-      "id": "731dfdd9-6253-4ef7-8a9a-e57e762ddbdf",
+      "id": "5e838d24-f64b-4178-83db-1c37012b0135",
       "name": "Rankine",
       "unit": "R",
-      "value": 0.5555555556
+      "value": 0.555556,
+      "base": false,
+      "fromFormula": null,
+      "toFormula": null
     }
   ]
 }

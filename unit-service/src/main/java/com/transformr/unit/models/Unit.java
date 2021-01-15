@@ -37,10 +37,22 @@ public class Unit {
 	@Column(name = "value", nullable = false)
 	private double value;
 
-	public Unit(String name, String unit, UnitType type, double value) {
+	@Column(name = "base", nullable = false)
+	private boolean base;
+
+	@Column(name = "fromFormula", nullable = true)
+	private String fromFormula;
+
+	@Column(name = "toFormula", nullable = true)
+	private String toFormula;
+
+	public Unit(String name, String unit, UnitType type, double value, boolean base, String fromFormula, String toFormula) {
 		this.name = name;
 		this.unit = unit;
 		this.type = type;
 		this.value = value;
+		this.fromFormula = fromFormula;
+		this.toFormula = toFormula;
+		this.base = base;
 	}
 }

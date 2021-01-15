@@ -18,7 +18,8 @@
     {
       "name": "Metre",
       "unit": "mt",
-      "value": 1
+      "value": 1,
+      "base": true
     },
     {
       "name": "Kilometre",
@@ -70,7 +71,8 @@
     {
       "name": "Square meter",
       "unit": "mt2",
-      "value": 1
+      "value": 1,
+      "base": true
     },
     {
       "name": "Square kilometer",
@@ -95,7 +97,7 @@
     {
       "name": "Acre",
       "unit": "ac",
-      "value": 4046.8564224
+      "value": 4046.856422
     },
     {
       "name": "Square mile",
@@ -105,24 +107,25 @@
     {
       "name": "Square yard",
       "unit": "yd2",
-      "value": 0.83612736
+      "value": 0.836127
     },
     {
       "name": "Square foot",
       "unit": "ft2",
-      "value": 0.09290304
+      "value": 0.092903
     },
     {
       "name": "Square inch",
       "unit": "in2",
-      "value": 0.00064516
+      "value": 0.000645
     }
   ],
   "volumes": [
     {
       "name": "Cubic meter",
       "unit": "mt3",
-      "value": 1
+      "value": 1,
+      "base": true
     },
     {
       "name": "Cubic kilometer",
@@ -147,12 +150,12 @@
     {
       "name": "Gallon",
       "unit": "gl",
-      "value": 0.0037854118
+      "value": 0.003785
     },
     {
       "name": "Pint",
       "unit": "pt",
-      "value": 0.0004731765
+      "value": 0.000473
     },
     {
       "name": "Cubic mile",
@@ -162,17 +165,17 @@
     {
       "name": "Cubic yard",
       "unit": "yd3",
-      "value": 0.764554858
+      "value": 0.764555
     },
     {
       "name": "Cubic foot",
       "unit": "ft3",
-      "value": 0.0283168466
+      "value": 0.028317
     },
     {
       "name": "Cubic inch",
       "unit": "in3",
-      "value": 0.0000163871
+      "value": 0.000016
     }
   ],
   "masses": [
@@ -184,7 +187,8 @@
     {
       "name": "Gram",
       "unit": "gm",
-      "value": 1
+      "value": 1,
+      "base": true
     },
     {
       "name": "Miligram",
@@ -204,7 +208,7 @@
     {
       "name": "Ounce",
       "unit": "oz",
-      "value": 28.349523125
+      "value": 28.349523
     },
     {
       "name": "Quintal",
@@ -216,22 +220,27 @@
     {
       "name": "Kelvin",
       "unit": "K",
-      "value": 1
+      "value": 1,
+      "base": true
     },
     {
       "name": "Celcius",
       "unit": "C",
-      "value": 274.15
+      "value": 274.15,
+      "fromFormula": "C + 273.15",
+      "toFormula": "K - 273.15"
     },
     {
       "name": "Farenheit",
       "unit": "F",
-      "value": 255.92777778
+      "value": 255.927778,
+      "fromFormula": "(F - 32) * 5 / 9 + 273.15",
+      "toFormula": "(K - 273.15) * 9 / 5 + 32"
     },
     {
       "name": "Rankine",
       "unit": "R",
-      "value": 0.5555555556
+      "value": 0.555556
     }
   ]
 }

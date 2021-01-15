@@ -3,4 +3,7 @@ export interface Unit {
   name: string;
   unit: string;
   value: number;
+  base: boolean;
+  fromFormula: string;
+  toFormula: string;
 }

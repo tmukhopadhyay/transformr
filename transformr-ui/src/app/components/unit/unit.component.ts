@@ -21,6 +21,7 @@ export class UnitComponent implements OnInit {
   public icon: string = '';
   public metricUnit: MetricUnit = null as unknown as MetricUnit;
   public units: Array<Unit> = [];
+  public baseUnit: Unit | undefined;
   public fromUnit: Unit | undefined;
   public toUnit: Unit | undefined;
   public unitConverterForm = new FormGroup({
@@ -47,6 +48,7 @@ export class UnitComponent implements OnInit {
     this.dataStore.metricUnit$.subscribe(metricUnit => {
       this.metricUnit = metricUnit;
       this.populateData();
+      this.baseUnit = this.units.find(u => u.base);
     });
   }
 
@@ -96,8 +98,19 @@ export class UnitComponent implements OnInit {
 
     this.fromUnit = this.units.find(u => u.id === formValue.fromUnitId);
     this.toUnit = this.units.find(u => u.id === formValue.toUnitId);
-    this.unitConverterForm.controls['toUnitValue'].setValue(
-      (this.fromUnit?.value || 0) * formValue.fromUnitValue / (this.toUnit?.value || 0)
-    );
+
+    var baseValue = 0;
+    if(this.fromUnit?.fromFormula) {
+      baseValue = eval(this.fromUnit?.fromFormula.replace('x', formValue.fromUnitValue));
+    } else {
+      baseValue = (this.fromUnit?.value || 0) * formValue.fromUnitValue;
+    }
+
+    if(this.toUnit?.toFormula) {
+      const tovalue = eval(this.toUnit?.toFormula.replace('x', String(baseValue)));
+      this.unitConverterForm.controls['toUnitValue'].setValue(tovalue);
+    } else {
+      this.unitConverterForm.controls['toUnitValue'].setValue(baseValue / (this.toUnit?.value || 0));
+    }
   }
 }

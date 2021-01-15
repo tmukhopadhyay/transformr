@@ -13,4 +13,7 @@ public class UnitDto {
 	private String name;
 	private String unit;
 	private double value;
+	private boolean base;
+	private String fromFormula;
+	private String toFormula;
 }

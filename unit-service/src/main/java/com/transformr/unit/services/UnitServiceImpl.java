@@ -59,6 +59,16 @@ public class UnitServiceImpl implements UnitService {
 				break;
 		}
 
-		units.add(new UnitDto(unit.getId().toString(), unit.getName(), unit.getUnit(), unit.getValue()));
+		units.add(
+			new UnitDto(
+				unit.getId().toString(),
+				unit.getName(),
+				unit.getUnit(),
+				unit.getValue(),
+				unit.isBase(),
+				unit.getFromFormula(),
+				unit.getToFormula()
+			)
+		);
 	}
 }

@@ -9,7 +9,6 @@ import org.springframework.context.event.EventListener;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.transformr.unit.dto.MetricUnitDto;
 import com.transformr.unit.enums.UnitType;
@@ -32,12 +31,12 @@ public class ApplicationEventListener {
 	}
 
 	@EventListener
-	public void onStartUp(ContextRefreshedEvent event) throws JsonParseException, IOException {
+	public void onStartUp(ContextRefreshedEvent event) throws IOException {
 		MetricUnitDto metricUnitDto = objectMapper.readValue(resource.getInputStream(), MetricUnitDto.class);
-		metricUnitDto.getAreas().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.AREA, u.getValue())));
-		metricUnitDto.getLengths().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.LENGTH, u.getValue())));
-		metricUnitDto.getMasses().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.MASS, u.getValue())));
-		metricUnitDto.getTemperatures().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.TEMPERATURE, u.getValue())));
-		metricUnitDto.getVolumes().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.VOLUME, u.getValue())));
+		metricUnitDto.getAreas().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.AREA, u.getValue(), u.isBase(), u.getFromFormula(), u.getToFormula())));
+		metricUnitDto.getLengths().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.LENGTH, u.getValue(), u.isBase(), u.getFromFormula(), u.getToFormula())));
+		metricUnitDto.getMasses().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.MASS, u.getValue(), u.isBase(), u.getFromFormula(), u.getToFormula())));
+		metricUnitDto.getTemperatures().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.TEMPERATURE, u.getValue(), u.isBase(), u.getFromFormula(), u.getToFormula())));
+		metricUnitDto.getVolumes().forEach(u -> unitRepository.saveAndFlush(new Unit(u.getName(), u.getUnit(), UnitType.VOLUME, u.getValue(), u.isBase(), u.getFromFormula(), u.getToFormula())));
 	}
 }
